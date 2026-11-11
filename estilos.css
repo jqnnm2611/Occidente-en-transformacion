@@ -1,0 +1,640 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f5f0e6;
+    color: #22201d;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+a {
+    color: #742f38;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #742f38;
+    outline-offset: 5px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    margin-bottom: 24px;
+    color: #493629;
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 22px 5%;
+    background: #22201d;
+    border-bottom: 3px solid #af8b4c;
+}
+
+.nombre-sitio {
+    color: #f5f0e6;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.encabezado nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.encabezado nav a {
+    color: #f5f0e6;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.encabezado nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.portada {
+    padding: 90px 24px 45px;
+    text-align: center;
+    border-bottom: 1px solid #cfc1ab;
+}
+
+.etiqueta {
+    margin-bottom: 18px;
+    color: #745238;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.portada h1 {
+    margin-bottom: 25px;
+    color: #493629;
+    font-size: clamp(44px, 7vw, 86px);
+    font-weight: normal;
+    letter-spacing: -2px;
+}
+
+.subtitulo {
+    margin-bottom: 20px;
+    color: #742f38;
+    font-size: 23px;
+    font-style: italic;
+}
+
+.descripcion-portada {
+    max-width: 590px;
+    margin: 0 auto 32px;
+    font-size: 18px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 13px 25px;
+    background: #493629;
+    color: #fff;
+    border: 1px solid #493629;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.boton:hover {
+    background: #742f38;
+}
+
+.seccion {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 65px 24px;
+    border-bottom: 1px solid #cfc1ab;
+    scroll-margin-top: 24px;
+}
+
+.seccion > p {
+    max-width: 800px;
+}
+
+.contenedor-tiempo {
+    margin: 30px 0 20px;
+    overflow-x: auto;
+    padding: 10px 8px 20px;
+}
+
+.linea-tiempo {
+    min-width: 1000px;
+}
+
+.fechas {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #896747;
+    color: #493629;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fila-tiempo {
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    padding-top: 20px;
+}
+
+.franja {
+    display: block;
+    padding: 17px 19px;
+    color: #fff;
+    border-left: 4px solid #af8b4c;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.franja:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(34, 32, 29, 0.18);
+}
+
+.franja h3 {
+    margin: 5px 0 8px;
+    font-size: 21px;
+}
+
+.franja p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.fecha-tema {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.industrial {
+    grid-column: 3 / 19;
+    background: #493629;
+}
+
+.romanticismo {
+    grid-column: 7 / 21;
+    background: #742f38;
+}
+
+.postnapoleonico {
+    grid-column: 14 / 21;
+    background: #34302c;
+}
+
+.utopias {
+    grid-column: 11 / 21;
+    background: #4c5943;
+}
+
+.nacionalismo {
+    grid-column: 11 / 25;
+    background: #68503c;
+}
+
+.conexiones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.tarjeta {
+    padding: 26px;
+    background: #fffdf8;
+    border: 1px solid #cfc1ab;
+    border-top: 3px solid #896747;
+}
+
+.tarjeta h3 {
+    color: #493629;
+}
+
+.tarjeta p {
+    margin-bottom: 0;
+}
+
+.integrantes {
+    padding-left: 22px;
+}
+
+.integrantes li {
+    margin-bottom: 8px;
+}
+
+.pie {
+    padding: 40px 24px;
+    background: #22201d;
+    color: #f5f0e6;
+    text-align: center;
+}
+
+.pie p {
+    margin-bottom: 8px;
+}
+
+.pie a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #f5f0e6;
+    text-underline-offset: 5px;
+}
+
+.pagina-tema .portada-tema {
+    padding: 80px 24px 55px;
+}
+
+.pagina-tema .portada-tema h1 {
+    max-width: 1100px;
+    margin: 20px auto;
+    font-size: clamp(42px, 6.8vw, 84px);
+    letter-spacing: -1.5px;
+    overflow-wrap: anywhere;
+}
+
+.pagina-tema .subtitulo {
+    margin: 0 0 20px;
+    font-size: clamp(20px, 3vw, 27px);
+}
+
+.periodo-tema {
+    margin-bottom: 30px;
+    color: #5f554b;
+    font: 13px/1.6 Arial, sans-serif;
+}
+
+.indice-tema {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    padding: 20px;
+    border-bottom: 1px solid #cfc1ab;
+    font: 14px/1.6 Arial, sans-serif;
+}
+
+.indice-tema a {
+    text-decoration: none;
+}
+
+.indice-tema a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.pagina-tema .seccion {
+    padding: 60px 24px;
+}
+
+.pagina-tema .seccion > p {
+    max-width: 820px;
+}
+
+.pagina-tema h2 {
+    margin: 0 0 25px;
+    color: #493629;
+    font-size: clamp(28px, 4vw, 36px);
+}
+
+.pagina-tema h3 {
+    color: #493629;
+    font-size: 22px;
+}
+
+.titulo-secundario {
+    margin: 30px 0 18px;
+}
+
+.ideas-tema {
+    max-width: 850px;
+    padding-left: 22px;
+}
+
+.ideas-tema li {
+    margin-bottom: 12px;
+}
+
+.referencias-breves {
+    margin-top: 24px;
+    color: #5f554b;
+    font: 13px/1.6 Arial, sans-serif;
+}
+
+.rejilla-personajes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.personaje {
+    background: #fffdf8;
+    border: 1px solid #cfc1ab;
+    border-top: 3px solid #896747;
+    overflow: hidden;
+}
+
+.foto-personaje {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center 25%;
+    background: #e9dfcf;
+    border-bottom: 1px solid #cfc1ab;
+}
+
+.texto-personaje {
+    padding: 23px;
+}
+
+.texto-personaje h3 {
+    margin: 0 0 16px;
+}
+
+.texto-personaje p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.cronologia-eventos {
+    list-style: none;
+    margin: 35px 0 0 10px;
+    padding: 0 0 0 32px;
+    border-left: 2px solid #896747;
+}
+
+.evento {
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.evento::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 29px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #742f38;
+    border: 3px solid #f5f0e6;
+    box-shadow: 0 0 0 1px #896747;
+}
+
+.boton-evento {
+    display: block;
+    width: 100%;
+    padding: 22px 25px;
+    text-align: left;
+    background: #fffdf8;
+    color: #22201d;
+    font: inherit;
+    border: 1px solid #cfc1ab;
+    border-left: 4px solid #af8b4c;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.boton-evento:hover {
+    background: #eee5d8;
+}
+
+.fecha-evento {
+    display: block;
+    color: #742f38;
+    font: bold 13px/1.6 Arial, sans-serif;
+    letter-spacing: 0.8px;
+}
+
+.boton-evento .titulo-evento {
+    display: block;
+    margin: 8px 0 12px;
+    color: #493629;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.importancia-tema {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.bloque-importancia {
+    border-top: 3px solid #896747;
+    padding-top: 20px;
+}
+
+.bloque-importancia h3 {
+    margin-top: 0;
+}
+
+.lista-fuentes {
+    padding-left: 25px;
+}
+
+.lista-fuentes li {
+    padding: 8px 0 14px 7px;
+    overflow-wrap: anywhere;
+    scroll-margin-top: 30px;
+}
+
+.regreso-final {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.ventana-evento {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    overflow-y: auto;
+    width: min(640px, calc(100% - 32px));
+    max-height: 85vh;
+    padding: 0;
+    border: 1px solid #896747;
+    background: #fffdf8;
+    color: #22201d;
+    box-shadow: 0 20px 80px #0005;
+}
+
+.ventana-evento::backdrop {
+    background: #17120ed0;
+}
+
+.interior-ventana {
+    padding: 25px 32px 32px;
+}
+
+.fila-cerrar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.cerrar-ventana {
+    padding: 9px 14px;
+    background: #493629;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    font: 14px Arial, sans-serif;
+}
+
+.cerrar-ventana:hover {
+    background: #742f38;
+}
+
+.lugar-evento {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #cfc1ab;
+}
+
+.pagina-tema :focus-visible {
+    outline: 3px solid #742f38;
+    outline-offset: 4px;
+}
+
+@media (max-width: 850px) {
+    .rejilla-personajes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .encabezado nav {
+        gap: 14px;
+    }
+
+    .portada {
+        padding-top: 65px;
+    }
+
+    .portada h1 {
+        letter-spacing: -1px;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+    }
+
+    .seccion {
+        padding: 45px 20px;
+    }
+
+    h2 {
+        font-size: 29px;
+    }
+
+    .conexiones {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .pagina-tema .portada-tema {
+        padding: 55px 20px 40px;
+    }
+
+    .pagina-tema .seccion {
+        padding: 40px 20px;
+    }
+
+    .rejilla-personajes,
+    .importancia-tema {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-personaje {
+        height: 250px;
+    }
+
+    .cronologia-eventos {
+        padding-left: 24px;
+    }
+
+    .evento::before {
+        left: -32px;
+    }
+
+    .boton-evento {
+        padding: 18px;
+    }
+
+    .interior-ventana {
+        padding: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .franja,
+    .boton {
+        transition: none;
+    }
+
+    .franja:hover {
+        transform: none;
+    }
+}
+
+@supports not selector(:popover-open) {
+    .ventana-evento {
+        position: static;
+        margin: 30px auto;
+        max-height: none;
+        box-shadow: none;
+    }
+
+    .cerrar-ventana {
+        display: none;
+    }
+}
