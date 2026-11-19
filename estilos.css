@@ -638,3 +638,14 @@ h3 {
         display: none;
     }
 }
+
+.conclusion-tema {
+    max-width: 850px;
+    padding: 25px;
+    background: #fffdf8;
+    border-left: 4px solid #af8b4c;
+}
+
+.conclusion-tema p {
+    margin-bottom: 0;
+}
